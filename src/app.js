@@ -27,7 +27,7 @@ io.on("connection", (client) => {
     clearInterval(interval);
   }
 
-  client.on('join', handleJoin)
+  // client.on('join', handleJoin)
 
   interval = setInterval(() => getAPIAndEmit(socket), 1000);
   client.on("disconnect", () => {
