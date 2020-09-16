@@ -13,10 +13,10 @@ const server = http.createServer(app)
 
 const io = socketio(server)
 
-const getAPIAndEmit = socket => {
+const getAPIAndEmit = client => {
   const response = new Date();
   // Emitting a new message. Will be consumed by the client
-  socket.emit("FromAPI", response);
+  client.emit("FromAPI", response);
 };
 
 let interval;
@@ -29,7 +29,7 @@ io.on("connection", (client) => {
 
   // client.on('join', handleJoin)
 
-  interval = setInterval(() => getAPIAndEmit(socket), 1000);
+  interval = setInterval(() => getAPIAndEmit(client), 1000);
   client.on("disconnect", () => {
     console.log("Client disconnected");
     clearInterval(interval);
