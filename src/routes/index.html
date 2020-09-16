@@ -5,11 +5,12 @@
       let socket = io();
       let el;
 
-      socket.on('time', (timeString) => {
+      socket.on('FromAPI', (timeString) => {
         el = document.getElementById('server-time');
         el.innerHTML = 'Server time: ' + timeString;
       });
     </script>
+    <title>Horsefeathers!</title>
   </head>
   <body>
     <p id="server-time"></p>
