@@ -1,0 +1,14 @@
+# IntelliJ project files
+.idea
+*.iml
+
+/node_modules
+
+.history
+.cache
+
+# Ignore generated stuff
+/logs
+logs/
+/target
+*.log
