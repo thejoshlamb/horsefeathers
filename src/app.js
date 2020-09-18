@@ -19,7 +19,7 @@ const getAPIAndEmit = client => {
   client.emit("FromAPI", response);
 };
 
-let interval;
+let interval; 
 
 io.on("connection", (client) => {
   console.log("New client connected");
