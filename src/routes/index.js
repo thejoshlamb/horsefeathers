@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 router.get("/", (request, response) => {
-  response.sendFile('/index.html', { root: __dirname });
+  response.send({ response: "hogwash" }).status(200);
 });
 
 router.get("/new-room", (request, response) => {
