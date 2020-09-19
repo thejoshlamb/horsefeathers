@@ -5,12 +5,4 @@ router.get("/", (request, response) => {
   response.send({ response: "hogwash" }).status(200);
 });
 
-router.get("/new-room", (request, response) => {
-  response.send({ response: "new room" }).status(200);
-});
-
-router.get("/", (request, response) => {
-  response.send({ response: "new room" }).status(200);
-});
-
 module.exports = router;
